@@ -18,16 +18,61 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            RichText(
-                text: TextSpan(
-              text: 'hello',
-              children: [
-                TextSpan(
-                  text: 'to you too',
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                cursorColor: Colors.blue,
+                enabled: true,
+                style: TextStyle(color: Colors.black, fontSize: 18),
+                decoration: InputDecoration(
+                  filled: false,
+                  prefixIcon: Icon(Icons.mail),
+                  fillColor: Colors.grey.withOpacity(0.5),
+                  hintText: 'Enter Email ',
+                  labelText: 'Email',
+                  hintStyle: TextStyle(
+                    color: Colors.grey.shade600,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.grey)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
                 ),
-              ],
-              style: Theme.of(context).textTheme.bodyText1,
-            ))
+                onChanged: (value) {
+                  print(value);
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                keyboardType: TextInputType.emailAddress,
+                cursorColor: Colors.blue,
+                enabled: true,
+                style: TextStyle(color: Colors.black, fontSize: 18),
+                decoration: InputDecoration(
+                  filled: false,
+                  prefixIcon: Icon(Icons.lock),
+                  suffixIcon: Icon(Icons.visibility_off),
+                  fillColor: Colors.grey.withOpacity(0.5),
+                  hintText: 'Enter Password ',
+                  labelText: 'Password',
+                  hintStyle: TextStyle(
+                    color: Colors.grey.shade600,
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.grey)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.blue)),
+                ),
+                onChanged: (value) {
+                  print(value);
+                },
+              ),
+            ),
           ],
         ),
       ),
@@ -134,3 +179,14 @@ class MyApp extends StatelessWidget {
 //                     'https://images.pexels.com/photos/12836129/pexels-photo-12836129.jpeg?cs=srgb&dl=pexels-kha-ruxury-12836129.jpg&fm=jpg'),
 //               ),
 //             ),
+// // rich TExt
+// RichText(
+//                 text: TextSpan(
+//               text: 'hello',
+//               children: [
+//                 TextSpan(
+//                   text: 'to you too',
+//                 ),
+//               ],
+//               style: Theme.of(context).textTheme.bodyText1,
+//             ))
