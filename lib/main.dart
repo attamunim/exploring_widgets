@@ -23,11 +23,22 @@ class MyApp extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Container(
-                  height: 180,
-                  width: 180,
+                  height: 200,
+                  width: 200,
                   color: Colors.red,
                 ),
-                Text('Atta ul Munim'),
+                Positioned(
+                  right: 0,
+                  child: Container(
+                    height: 180,
+                    width: 180,
+                    color: Colors.green,
+                  ),
+                ),
+                Positioned(
+                  top: 10,
+                  child: Text('Atta ul Munim'),
+                ),
               ],
             )),
             Stack(
