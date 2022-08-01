@@ -15,15 +15,33 @@ class MyApp extends StatelessWidget {
           title: const Text('Lottery App'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
+            SizedBox(
+              height: 100,
+            ),
+            Divider(
+              color: Colors.black,
+              thickness: 1,
+            ),
+            SizedBox(
+              height: 100,
+              child: VerticalDivider(
+                color: Colors.black,
+                thickness: 2,
+              ),
+            ),
+            Divider(
+              color: Colors.black,
+              thickness: 1,
+            ),
             Center(
               child: CircleAvatar(
-                radius: 150,
+                radius: 100,
                 backgroundColor: Colors.redAccent,
                 backgroundImage: NetworkImage(
-                    'https://images.pexels.com/photos/10677497/pexels-photo-10677497.jpeg?cs=srgb&dl=pexels-cottonbro-10677497.jpg&fm=jpg'),
+                    'https://images.pexels.com/photos/12836129/pexels-photo-12836129.jpeg?cs=srgb&dl=pexels-kha-ruxury-12836129.jpg&fm=jpg'),
               ),
             ),
           ],
