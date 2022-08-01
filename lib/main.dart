@@ -17,49 +17,15 @@ class MyApp extends StatelessWidget {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SizedBox(
-                child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  height: 200,
-                  width: 200,
-                  color: Colors.red,
-                ),
-                Positioned(
-                  right: 0,
-                  child: Container(
-                    height: 180,
-                    width: 180,
-                    color: Colors.green,
-                  ),
-                ),
-                Positioned(
-                  top: 10,
-                  child: Text('Atta ul Munim'),
-                ),
-              ],
-            )),
-            Stack(
-              children: [
-                Container(
-                  height: 180,
-                  width: 180,
-                  color: Colors.red,
-                ),
-                Container(
-                  height: 150,
-                  width: 150,
-                  color: Colors.green,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.blue,
-                ),
-              ],
-            )
+          children: const [
+            Center(
+              child: CircleAvatar(
+                radius: 150,
+                backgroundColor: Colors.redAccent,
+                backgroundImage: NetworkImage(
+                    'https://images.pexels.com/photos/10677497/pexels-photo-10677497.jpeg?cs=srgb&dl=pexels-cottonbro-10677497.jpg&fm=jpg'),
+              ),
+            ),
           ],
         ),
       ),
@@ -77,7 +43,7 @@ class MyApp extends StatelessWidget {
 //             ),
 //             Center(
 //               child: Container(
-//                 decoration: BoxDecoration( 
+//                 decoration: BoxDecoration(
 //                   color: Colors.orange,
 //                   borderRadius: const BorderRadius.only(
 //                     topRight: const Radius.circular(16),
@@ -95,3 +61,46 @@ class MyApp extends StatelessWidget {
 //                 ),
 //               ),
 //             ),
+// stack widget
+//  SizedBox(
+//                 child: Stack(
+//               alignment: Alignment.center,
+//               children: [
+//                 Container(
+//                   height: 200,
+//                   width: 200,
+//                   color: Colors.red,
+//                 ),
+//                 Positioned(
+//                   right: 0,
+//                   child: Container(
+//                     height: 180,
+//                     width: 180,
+//                     color: Colors.green,
+//                   ),
+//                 ),
+//                 Positioned(
+//                   top: 10,
+//                   child: Text('Atta ul Munim'),
+//                 ),
+//               ],
+//             )),
+//             Stack(
+//               children: [
+//                 Container(
+//                   height: 180,
+//                   width: 180,
+//                   color: Colors.red,
+//                 ),
+//                 Container(
+//                   height: 150,
+//                   width: 150,
+//                   color: Colors.green,
+//                 ),
+//                 Container(
+//                   height: 100,
+//                   width: 100,
+//                   color: Colors.blue,
+//                 ),
+//               ],
+//             )
